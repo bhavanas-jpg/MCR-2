@@ -10,13 +10,18 @@ const HabitCard = ({ habitData }) => {
     const { state, dispatch } = useData();
     const {  name, habitName, repeat, goal, timeOfDay, startDate } = habitData || {};
 
+   
+
+
     return (
         <>
             <div className="card">
                 <h2  onClick={() => setShowModal(true)}>{habitName}</h2>
 
                 <div className="action-btns">
-                    <button>Edit</button>
+                    <button
+                    onClick={()=>dispatch({type: "EDIT_HABIT", payload: habitData})}
+                    >Edit</button>
                     <button onClick={() => dispatch({ type: "DELETE_HABIT", payload: habitData?.id })}>delete</button>
                     <button
                         onClick={() => {

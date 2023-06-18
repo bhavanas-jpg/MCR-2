@@ -1,16 +1,19 @@
+import { useData } from "../context/DataContext";
 import {habits} from "../data/habits";
 import { v4 as uuid } from "uuid";
 
 const HabitReducer =()=>{
   
+    
     const initialState ={
         allHabits :  habits,
-        archiveHabits: [],
-        
+        archiveHabits: [], 
+         
     }
 
     const habitReducer = (state,action)=>{
         switch(action.type){
+      
           case "ADD_HABIT":
             console.log(action.payload);
             return{
