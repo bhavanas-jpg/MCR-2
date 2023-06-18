@@ -8,7 +8,7 @@ const HabitCard = ({ habitData }) => {
 
 
     const { state, dispatch } = useData();
-    const { id, name, habitName, repeat, goal, timeOfDay, startDate } = habitData;
+    const {  name, habitName, repeat, goal, timeOfDay, startDate } = habitData || {};
 
     return (
         <>
@@ -17,7 +17,7 @@ const HabitCard = ({ habitData }) => {
 
                 <div className="action-btns">
                     <button>Edit</button>
-                    <button onClick={() => dispatch({ type: "DELETE_HABIT", payload: id })}>delete</button>
+                    <button onClick={() => dispatch({ type: "DELETE_HABIT", payload: habitData?.id })}>delete</button>
                     <button
                         onClick={() => {
                             dispatch({ type: "ARCHIVE_HABIT", payload: habitData });
