@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+}
+.nav-links{
+  display: flex;
+  gap: 2rem;
+}
+.navlink{
+  color: #000;
+  text-decoration: none;
+}
+.habit-card{
+ display: flex; 
+ gap: 2rem;
+ margin-top: 2rem;
+}
+.card{
+  width: 200px;
+  height: 200px;
+  background-color: #d8c2e0;
+  text-align: center;
+  border-radius: 12px;
+  padding: 1rem;
+}
+/**action-buttons**/
+.action-btns button{
+  cursor: pointer;
+  margin-right: 1rem;
+}
